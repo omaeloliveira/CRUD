@@ -14,6 +14,7 @@ namespace CRUD
         public SqlCommand command = new SqlCommand();
         public SqlDataReader dr;
         public DataTable dt = new DataTable();
+        public SqlDataAdapter da = new SqlDataAdapter();
         public string sql = string.Empty;
 
         public Connection()

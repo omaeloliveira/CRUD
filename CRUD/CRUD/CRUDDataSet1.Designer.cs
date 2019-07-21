@@ -20,9 +20,9 @@ namespace CRUD {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("CRUDDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("CRUDDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class CRUDDataSet : global::System.Data.DataSet {
+    public partial class CRUDDataSet1 : global::System.Data.DataSet {
         
         private CadastroDataTable tableCadastro;
         
@@ -30,7 +30,7 @@ namespace CRUD {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public CRUDDataSet() {
+        public CRUDDataSet1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace CRUD {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected CRUDDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected CRUDDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace CRUD {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            CRUDDataSet cln = ((CRUDDataSet)(base.Clone()));
+            CRUDDataSet1 cln = ((CRUDDataSet1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace CRUD {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "CRUDDataSet";
+            this.DataSetName = "CRUDDataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/CRUDDataSet.xsd";
+            this.Namespace = "http://tempuri.org/CRUDDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableCadastro = new CadastroDataTable();
@@ -225,7 +225,7 @@ namespace CRUD {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            CRUDDataSet ds = new CRUDDataSet();
+            CRUDDataSet1 ds = new CRUDDataSet1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -285,9 +285,9 @@ namespace CRUD {
             
             private global::System.Data.DataColumn columnCelular;
             
-            private global::System.Data.DataColumn columnTelefone;
-            
             private global::System.Data.DataColumn columnEndereco;
+            
+            private global::System.Data.DataColumn columnTelefone;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -348,17 +348,17 @@ namespace CRUD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TelefoneColumn {
+            public global::System.Data.DataColumn EnderecoColumn {
                 get {
-                    return this.columnTelefone;
+                    return this.columnEndereco;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn EnderecoColumn {
+            public global::System.Data.DataColumn TelefoneColumn {
                 get {
-                    return this.columnEndereco;
+                    return this.columnTelefone;
                 }
             }
             
@@ -399,14 +399,14 @@ namespace CRUD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CadastroRow AddCadastroRow(string Nome, string Celular, string Telefone, string Endereco) {
+            public CadastroRow AddCadastroRow(string Nome, string Celular, string Endereco, string Telefone) {
                 CadastroRow rowCadastroRow = ((CadastroRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Nome,
                         Celular,
-                        Telefone,
-                        Endereco};
+                        Endereco,
+                        Telefone};
                 rowCadastroRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCadastroRow);
                 return rowCadastroRow;
@@ -439,8 +439,8 @@ namespace CRUD {
                 this.columnId_Pessoa = base.Columns["Id_Pessoa"];
                 this.columnNome = base.Columns["Nome"];
                 this.columnCelular = base.Columns["Celular"];
-                this.columnTelefone = base.Columns["Telefone"];
                 this.columnEndereco = base.Columns["Endereco"];
+                this.columnTelefone = base.Columns["Telefone"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -452,10 +452,10 @@ namespace CRUD {
                 base.Columns.Add(this.columnNome);
                 this.columnCelular = new global::System.Data.DataColumn("Celular", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCelular);
-                this.columnTelefone = new global::System.Data.DataColumn("Telefone", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTelefone);
                 this.columnEndereco = new global::System.Data.DataColumn("Endereco", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEndereco);
+                this.columnTelefone = new global::System.Data.DataColumn("Telefone", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTelefone);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId_Pessoa}, true));
                 this.columnId_Pessoa.AutoIncrement = true;
@@ -468,8 +468,8 @@ namespace CRUD {
                 this.columnNome.MaxLength = 50;
                 this.columnCelular.AllowDBNull = false;
                 this.columnCelular.MaxLength = 50;
-                this.columnTelefone.MaxLength = 50;
                 this.columnEndereco.MaxLength = 50;
+                this.columnTelefone.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -537,7 +537,7 @@ namespace CRUD {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                CRUDDataSet ds = new CRUDDataSet();
+                CRUDDataSet1 ds = new CRUDDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -645,22 +645,6 @@ namespace CRUD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Telefone {
-                get {
-                    try {
-                        return ((string)(this[this.tableCadastro.TelefoneColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Telefone\' na tabela \'Cadastro\' é DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCadastro.TelefoneColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Endereco {
                 get {
                     try {
@@ -677,14 +661,18 @@ namespace CRUD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTelefoneNull() {
-                return this.IsNull(this.tableCadastro.TelefoneColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTelefoneNull() {
-                this[this.tableCadastro.TelefoneColumn] = global::System.Convert.DBNull;
+            public string Telefone {
+                get {
+                    try {
+                        return ((string)(this[this.tableCadastro.TelefoneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Telefone\' na tabela \'Cadastro\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCadastro.TelefoneColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -697,6 +685,18 @@ namespace CRUD {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetEnderecoNull() {
                 this[this.tableCadastro.EnderecoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTelefoneNull() {
+                return this.IsNull(this.tableCadastro.TelefoneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTelefoneNull() {
+                this[this.tableCadastro.TelefoneColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -735,7 +735,7 @@ namespace CRUD {
         }
     }
 }
-namespace CRUD.CRUDDataSetTableAdapters {
+namespace CRUD.CRUDDataSet1TableAdapters {
     
     
     /// <summary>
@@ -862,46 +862,46 @@ namespace CRUD.CRUDDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Id_Pessoa", "Id_Pessoa");
             tableMapping.ColumnMappings.Add("Nome", "Nome");
             tableMapping.ColumnMappings.Add("Celular", "Celular");
-            tableMapping.ColumnMappings.Add("Telefone", "Telefone");
             tableMapping.ColumnMappings.Add("Endereco", "Endereco");
+            tableMapping.ColumnMappings.Add("Telefone", "Telefone");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Cadastro] WHERE (([Id_Pessoa] = @Original_Id_Pessoa) AND ([Nome] = @Original_Nome) AND ([Celular] = @Original_Celular) AND ((@IsNull_Telefone = 1 AND [Telefone] IS NULL) OR ([Telefone] = @Original_Telefone)) AND ((@IsNull_Endereco = 1 AND [Endereco] IS NULL) OR ([Endereco] = @Original_Endereco)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Cadastro] WHERE (([Id_Pessoa] = @Original_Id_Pessoa) AND ([Nome] = @Original_Nome) AND ([Celular] = @Original_Celular) AND ((@IsNull_Endereco = 1 AND [Endereco] IS NULL) OR ([Endereco] = @Original_Endereco)) AND ((@IsNull_Telefone = 1 AND [Telefone] IS NULL) OR ([Telefone] = @Original_Telefone)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Pessoa", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Pessoa", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Celular", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Celular", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Telefone", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefone", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Telefone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefone", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Endereco", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Endereco", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Endereco", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Endereco", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Telefone", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefone", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Telefone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefone", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [Cadastro] ([Nome], [Celular], [Telefone], [Endereco]) VALUES (@Nome," +
-                " @Celular, @Telefone, @Endereco);\r\nSELECT Id_Pessoa, Nome, Celular, Telefone, En" +
-                "dereco FROM Cadastro WHERE (Id_Pessoa = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Cadastro] ([Nome], [Celular], [Endereco], [Telefone]) VALUES (" +
+                "@Nome, @Celular, @Endereco, @Telefone);\r\nSELECT Id_Pessoa, Nome, Celular, Endere" +
+                "co, Telefone FROM Cadastro WHERE (Id_Pessoa = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Celular", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Celular", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Telefone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Endereco", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Endereco", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Telefone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Cadastro] SET [Nome] = @Nome, [Celular] = @Celular, [Telefone] = @Telefone, [Endereco] = @Endereco WHERE (([Id_Pessoa] = @Original_Id_Pessoa) AND ([Nome] = @Original_Nome) AND ([Celular] = @Original_Celular) AND ((@IsNull_Telefone = 1 AND [Telefone] IS NULL) OR ([Telefone] = @Original_Telefone)) AND ((@IsNull_Endereco = 1 AND [Endereco] IS NULL) OR ([Endereco] = @Original_Endereco)));
-SELECT Id_Pessoa, Nome, Celular, Telefone, Endereco FROM Cadastro WHERE (Id_Pessoa = @Id_Pessoa)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Cadastro] SET [Nome] = @Nome, [Celular] = @Celular, [Endereco] = @Endereco, [Telefone] = @Telefone WHERE (([Id_Pessoa] = @Original_Id_Pessoa) AND ([Nome] = @Original_Nome) AND ([Celular] = @Original_Celular) AND ((@IsNull_Endereco = 1 AND [Endereco] IS NULL) OR ([Endereco] = @Original_Endereco)) AND ((@IsNull_Telefone = 1 AND [Telefone] IS NULL) OR ([Telefone] = @Original_Telefone)));
+SELECT Id_Pessoa, Nome, Celular, Endereco, Telefone FROM Cadastro WHERE (Id_Pessoa = @Id_Pessoa)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Celular", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Celular", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Telefone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Endereco", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Endereco", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Telefone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Pessoa", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Pessoa", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Celular", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Celular", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Telefone", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefone", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Telefone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefone", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Endereco", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Endereco", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Endereco", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Endereco", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Telefone", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefone", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Telefone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefone", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Pessoa", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Pessoa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -915,24 +915,18 @@ SELECT Id_Pessoa, Nome, Celular, Telefone, Endereco FROM Cadastro WHERE (Id_Pess
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        Id_Pessoa, Nome, Celular, Telefone, Endereco\r\nFROM            Cadas" +
-                "tro";
+            this._commandCollection[0].CommandText = "SELECT Id_Pessoa, Nome, Celular, Endereco, Telefone FROM dbo.Cadastro";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        Id_Pessoa, Nome, Celular, Telefone, Endereco\r\nFROM            Cadas" +
-                "tro";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(CRUDDataSet.CadastroDataTable dataTable) {
+        public virtual int Fill(CRUDDataSet1.CadastroDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -945,9 +939,9 @@ SELECT Id_Pessoa, Nome, Celular, Telefone, Endereco FROM Cadastro WHERE (Id_Pess
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual CRUDDataSet.CadastroDataTable GetData() {
+        public virtual CRUDDataSet1.CadastroDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            CRUDDataSet.CadastroDataTable dataTable = new CRUDDataSet.CadastroDataTable();
+            CRUDDataSet1.CadastroDataTable dataTable = new CRUDDataSet1.CadastroDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -955,27 +949,14 @@ SELECT Id_Pessoa, Nome, Celular, Telefone, Endereco FROM Cadastro WHERE (Id_Pess
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillById(CRUDDataSet.CadastroDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(CRUDDataSet.CadastroDataTable dataTable) {
+        public virtual int Update(CRUDDataSet1.CadastroDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(CRUDDataSet dataSet) {
+        public virtual int Update(CRUDDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "Cadastro");
         }
         
@@ -998,7 +979,7 @@ SELECT Id_Pessoa, Nome, Celular, Telefone, Endereco FROM Cadastro WHERE (Id_Pess
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id_Pessoa, string Original_Nome, string Original_Celular, string Original_Telefone, string Original_Endereco) {
+        public virtual int Delete(int Original_Id_Pessoa, string Original_Nome, string Original_Celular, string Original_Endereco, string Original_Telefone) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id_Pessoa));
             if ((Original_Nome == null)) {
                 throw new global::System.ArgumentNullException("Original_Nome");
@@ -1012,21 +993,21 @@ SELECT Id_Pessoa, Nome, Celular, Telefone, Endereco FROM Cadastro WHERE (Id_Pess
             else {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Celular));
             }
-            if ((Original_Telefone == null)) {
+            if ((Original_Endereco == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Telefone));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Endereco));
             }
-            if ((Original_Endereco == null)) {
+            if ((Original_Telefone == null)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Endereco));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Telefone));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1048,7 +1029,7 @@ SELECT Id_Pessoa, Nome, Celular, Telefone, Endereco FROM Cadastro WHERE (Id_Pess
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Nome, string Celular, string Telefone, string Endereco) {
+        public virtual int Insert(string Nome, string Celular, string Endereco, string Telefone) {
             if ((Nome == null)) {
                 throw new global::System.ArgumentNullException("Nome");
             }
@@ -1061,17 +1042,17 @@ SELECT Id_Pessoa, Nome, Celular, Telefone, Endereco FROM Cadastro WHERE (Id_Pess
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Celular));
             }
-            if ((Telefone == null)) {
+            if ((Endereco == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Telefone));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Endereco));
             }
-            if ((Endereco == null)) {
+            if ((Telefone == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Endereco));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Telefone));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1093,7 +1074,7 @@ SELECT Id_Pessoa, Nome, Celular, Telefone, Endereco FROM Cadastro WHERE (Id_Pess
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Nome, string Celular, string Telefone, string Endereco, int Original_Id_Pessoa, string Original_Nome, string Original_Celular, string Original_Telefone, string Original_Endereco, int Id_Pessoa) {
+        public virtual int Update(string Nome, string Celular, string Endereco, string Telefone, int Original_Id_Pessoa, string Original_Nome, string Original_Celular, string Original_Endereco, string Original_Telefone, int Id_Pessoa) {
             if ((Nome == null)) {
                 throw new global::System.ArgumentNullException("Nome");
             }
@@ -1106,17 +1087,17 @@ SELECT Id_Pessoa, Nome, Celular, Telefone, Endereco FROM Cadastro WHERE (Id_Pess
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Celular));
             }
-            if ((Telefone == null)) {
+            if ((Endereco == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Telefone));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Endereco));
             }
-            if ((Endereco == null)) {
+            if ((Telefone == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Endereco));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Telefone));
             }
             this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_Id_Pessoa));
             if ((Original_Nome == null)) {
@@ -1131,21 +1112,21 @@ SELECT Id_Pessoa, Nome, Celular, Telefone, Endereco FROM Cadastro WHERE (Id_Pess
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Celular));
             }
-            if ((Original_Telefone == null)) {
+            if ((Original_Endereco == null)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Telefone));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Endereco));
             }
-            if ((Original_Endereco == null)) {
+            if ((Original_Telefone == null)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Endereco));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Telefone));
             }
             this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Id_Pessoa));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
@@ -1168,8 +1149,8 @@ SELECT Id_Pessoa, Nome, Celular, Telefone, Endereco FROM Cadastro WHERE (Id_Pess
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Nome, string Celular, string Telefone, string Endereco, int Original_Id_Pessoa, string Original_Nome, string Original_Celular, string Original_Telefone, string Original_Endereco) {
-            return this.Update(Nome, Celular, Telefone, Endereco, Original_Id_Pessoa, Original_Nome, Original_Celular, Original_Telefone, Original_Endereco, Original_Id_Pessoa);
+        public virtual int Update(string Nome, string Celular, string Endereco, string Telefone, int Original_Id_Pessoa, string Original_Nome, string Original_Celular, string Original_Endereco, string Original_Telefone) {
+            return this.Update(Nome, Celular, Endereco, Telefone, Original_Id_Pessoa, Original_Nome, Original_Celular, Original_Endereco, Original_Telefone, Original_Id_Pessoa);
         }
     }
     
@@ -1264,7 +1245,7 @@ SELECT Id_Pessoa, Nome, Celular, Telefone, Endereco FROM Cadastro WHERE (Id_Pess
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(CRUDDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(CRUDDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._cadastroTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Cadastro.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1283,7 +1264,7 @@ SELECT Id_Pessoa, Nome, Celular, Telefone, Endereco FROM Cadastro WHERE (Id_Pess
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(CRUDDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(CRUDDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._cadastroTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Cadastro.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1301,7 +1282,7 @@ SELECT Id_Pessoa, Nome, Celular, Telefone, Endereco FROM Cadastro WHERE (Id_Pess
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(CRUDDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(CRUDDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._cadastroTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Cadastro.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1343,7 +1324,7 @@ SELECT Id_Pessoa, Nome, Celular, Telefone, Endereco FROM Cadastro WHERE (Id_Pess
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(CRUDDataSet dataSet) {
+        public virtual int UpdateAll(CRUDDataSet1 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

@@ -62,6 +62,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CRUDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CRUDDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRUDDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +97,17 @@
     </None>
     <None Include="CRUDDataSet.xss">
       <DependentUpon>CRUDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CRUDDataSet1.xsc">
+      <DependentUpon>CRUDDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CRUDDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRUDDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRUDDataSet1.xss">
+      <DependentUpon>CRUDDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
